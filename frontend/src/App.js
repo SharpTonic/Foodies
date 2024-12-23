@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// Import required components
+import React from 'react'; // Core library for building React applications
+import RecipeList from './components/RecipeList'; // Import the RecipeList component
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// Define the main App component
+const App = () => {
+    return (
+        <div>
+            {/* Application Header */}
+            <header>
+                <h1>Welcome to the Recipe App</h1> {/* Main title */}
+                <p>Discover, create, and share delicious recipes!</p> {/* Subtext */}
+            </header>
 
+            {/* Render the RecipeList component */}
+            <main>
+                <RecipeList />
+            </main>
+        </div>
+    );
+};
+
+// Export the App component for rendering
 export default App;
